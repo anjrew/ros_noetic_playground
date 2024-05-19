@@ -38,8 +38,5 @@ rosrun beginner_tutorials listener.py
 
 6. Run the api node
 ```bash
-rosrun beginner_tutorials listener.py 
+rosrun beginner_tutorials ros_api.py 
 ```
-
-7. Ru
-```bash
