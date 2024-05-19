@@ -16,7 +16,7 @@ state = None
 
 
 def signal_handler(signal, frame):
-    print('Terminating node...')
+    print('Terminating node...', signal, frame)
     rospy.signal_shutdown("Node terminated")
     sys.exit(0)
 

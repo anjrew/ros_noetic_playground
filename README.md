@@ -11,17 +11,35 @@ ON a RPi 5 Rasbian bookworm.
 
 # Basic Run Workflow
 
-1. Start ROS core
+1. Compile the package by running the following command in the root of the **workspace**
+```bash
+catkin_make
+``` 
+
+2. Source the workspace
+```bash
+source devel/setup.bash
+```
+
+3. Start ROS core node
 ```bash
 roscore
 ```
 
-2. Run the publisher node
+4. Run the publisher node
 ```bash
 rosrun beginner_tutorials talker.py
 ```
 
-3. Run the subscriber node
+5. Run the subscriber node
 ```bash
 rosrun beginner_tutorials listener.py 
 ```
+
+6. Run the api node
+```bash
+rosrun beginner_tutorials listener.py 
+```
+
+7. Ru
+```bash
