@@ -7,3 +7,21 @@ ON a RPi 5 Rasbian bookworm.
 1. Create a catkin package [link](http://wiki.ros.org/ROS/Tutorials/CreatingPackage)
 2. Write a publisher node [link](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29)
 3. Run the two together [link](http://wiki.ros.org/ROS/Tutorials/ExaminingPublisherSubscriber)
+
+
+# Basic Run Workflow
+
+1. Start ROS core
+```bash
+roscore
+```
+
+2. Run the publisher node
+```bash
+rosrun beginner_tutorials talker.py
+```
+
+3. Run the subscriber node
+```bash
+rosrun beginner_tutorials listener.py 
+```
