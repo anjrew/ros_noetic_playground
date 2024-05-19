@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "codezombiech.gitignore",
+        "zchrissirhcz.cmake-highlight",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "visualstudioexptteam.vscodeintellicode",
+        "ms-python.debugpy",
+        "github.copilot-chat",
+        "ms-python.black-formatter",
+        "sonarsource.sonarlint-vscode",
+        "ms-python.flake8",
+        "twxs.cmake"
+    ]
+}

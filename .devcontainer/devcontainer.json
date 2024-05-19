@@ -1,0 +1,48 @@
+{
+    "name": "Noetic Container",
+    "dockerFile": "Dockerfile",
+    "runArgs": [
+      "--privileged",
+      "--network=host"
+    ],
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "workspaceFolder": "/workspace",
+    "mounts": [
+      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind",
+      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind"
+    ],
+    "features": {
+      "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+        "moby": true,
+        "installDockerBuildx": true,
+        "version": "latest",
+        "dockerDashComposeVersion": "v2"
+      }
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+            "mhutchie.git-graph",
+            "donjayamanne.githistory",
+            "GitHub.copilot-chat",
+            "ms-vscode.cmake-tools",
+            "zchrissirhcz.cmake-highlight",
+            "ms-python.python",
+            "ms-python.vscode-pylance",
+            "VisualStudioExptTeam.vscodeintellicode",
+            "ms-python.debugpy",
+            "ms-python.black-formatter",
+            "SonarSource.sonarlint-vscode",
+            "ms-python.flake8",
+            "twxs.cmake"
+        ]
+      }
+    },
+    "forwardPorts": [
+      22
+    ],
+    "remoteEnv": {
+      "SSH_AUTH_SOCK": "${containerEnv:SSH_AUTH_SOCK}"
+    },
+    "postCreateCommand": "echo \"Container created\""
+  }
