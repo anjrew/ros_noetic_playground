@@ -44,5 +44,10 @@ RUN sudo apt install -y python3-rosdep
 # RUN sudo rosdep init
 RUN rosdep update
 
-
 RUN echo "source /ldlidar_ros_ws/devel/setup.bash" >> ~/.bashrc
+
+RUN set -xe \
+    && apt-get update -y \
+    && apt-get install -y python3-pip
+
+RUN pip3 install fastapi
