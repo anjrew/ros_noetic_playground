@@ -52,8 +52,9 @@ def main():
     fastapi_thread.start()
     
     # spin() simply keeps python from exiting until this node is stopped
+    rospy.loginfo('API is running...')
     rospy.spin()
-
+    fastapi_thread.join()
 
     while not rospy.is_shutdown():
         # Your ROS node logic here
@@ -61,9 +62,7 @@ def main():
 
     # Stop FastAPI when the ROS node is shut down
     rospy.signal_shutdown("Node terminated")
-    fastapi_thread.join()
-    
-    
+
 
 if __name__ == '__main__':
     try:
